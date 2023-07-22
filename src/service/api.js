@@ -10,7 +10,10 @@ const axiosInstance = axios.create({
   headers: {
     Accept: "application/json, form-data",
     "content-type": "application/json",
+    "Access-Control-Allow-Origin":"https://blog-project-server-dy7f.onrender.com"
   },
+
+  
 });
 
 axiosInstance.interceptors.request.use(
@@ -91,6 +94,7 @@ for (const [key, value] of Object.entries(SERVICE_URLS)) {
       responseType: value.responseType,
       headers: {
         authorization: getAccessToken(),
+        "Access-Control-Allow-Origin":"https://blog-project-server-dy7f.onrender.com"
       },
       TYPE: getType(value, body),
       onUploadProgress: function (progressEvent) {
