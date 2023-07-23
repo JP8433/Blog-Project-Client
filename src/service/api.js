@@ -9,7 +9,7 @@ const axiosInstance = axios.create({
   timeout: 100000,
   headers: {
     Accept: "application/json, form-data",
-    //"content-type": "application/json",
+    "content-type": "application/json",
    // "Access-Control-Allow-Origin":"https://blog-project-server-dy7f.onrender.com"
   },
 
