@@ -81,8 +81,8 @@ const Login=({isUserAuthenticated})=>{
 
 
     const [account,toggleAccount]=useState('login')
-    const [signup,setSignup]=useState('signupInitialValues')
-    const [login, setLogin] = useState('loginInitialValues');
+    const [signup,setSignup]=useState(signupInitialValues)
+    const [login, setLogin] = useState(loginInitialValues);
     const [error, showError] = useState('');
     const { setAccount } = useContext(DataContext)
     const navigate = useNavigate();
