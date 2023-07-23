@@ -8,11 +8,11 @@ const axiosInstance = axios.create({
   baseURL: API_URL,
   timeout: 100000,
   headers: {
-    Accept: "application/json, form-data",
+    "Accept": "application/json, form-data",
     "Content-Type":"application/json",
   "Access-Control-Allow-Origin":"https://blog-project-server-dy7f.onrender.com",
     "Access-Control-Allow-Origin": "*",
-"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept,authorization"
   },
 
   
