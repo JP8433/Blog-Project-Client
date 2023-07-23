@@ -2,7 +2,7 @@ import axios from "axios";
 import { API_NOTIFICATION_MESSAGES, SERVICE_URLS } from "../constants/config";
 import { getAccessToken, getType } from "../utils/common-utils";
 // const API_URL = "http://localhost:8000";
-const API_URL = "https://blogging-app-wjms.vercel.app/";
+const API_URL = "https://blog-backend-latest.onrender.com";
 
 const axiosInstance = axios.create({
   baseURL: API_URL,
@@ -10,7 +10,7 @@ const axiosInstance = axios.create({
   headers: {
     "Accept": "application/json, form-data",
     "Content-Type":"application/json",
- // "Access-Control-Allow-Origin":"https://blogging-app-wjms.vercel.app/",
+ // "Access-Control-Allow-Origin":"https://blog-backend-latest.onrender.com",
  //   "Access-Control-Allow-Origin": "*",
 "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept,authorization"
   },
@@ -96,7 +96,7 @@ for (const [key, value] of Object.entries(SERVICE_URLS)) {
       responseType: value.responseType,
       headers: {
         authorization: getAccessToken(),
-        "Access-Control-Allow-Origin":"https://blogging-app-wjms.vercel.app/"
+        "Access-Control-Allow-Origin":"https://blog-backend-latest.onrender.com"
       },
       TYPE: getType(value, body),
       onUploadProgress: function (progressEvent) {
