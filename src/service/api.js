@@ -2,7 +2,7 @@ import axios from "axios";
 import { API_NOTIFICATION_MESSAGES, SERVICE_URLS } from "../constants/config";
 import { getAccessToken, getType } from "../utils/common-utils";
 // const API_URL = "http://localhost:8000";
-const API_URL = "https://blog-project-server-dy7f.onrender.com";
+const API_URL = "https://blog-backend-latest.onrender.com";
 
 const axiosInstance = axios.create({
   baseURL: API_URL,
@@ -96,7 +96,7 @@ for (const [key, value] of Object.entries(SERVICE_URLS)) {
       responseType: value.responseType,
       headers: {
         authorization: getAccessToken(),
-        "Access-Control-Allow-Origin":"https://blog-project-server-dy7f.onrender.com"
+        "Access-Control-Allow-Origin":"https://blog-backend-latest.onrender.com"
       },
       TYPE: getType(value, body),
       onUploadProgress: function (progressEvent) {
