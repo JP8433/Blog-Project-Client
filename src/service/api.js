@@ -11,6 +11,8 @@ const axiosInstance = axios.create({
     Accept: "application/json, form-data",
     "content-type": "application/json",
   "Access-Control-Allow-Origin":"https://blog-project-server-dy7f.onrender.com"
+    "Access-Control-Allow-Origin": "*",
+"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
   },
 
   
